@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
 </head>
-<body>
-<div class="m-4 flex justify-center">
-    <h3 class="text-4xl font-bold text-slate-200 uppercase">
-        Ruvunga's Chatbot
-    </h3>
-</div>
-<div id="chat-template" class="hidden odd:bg-green-50 even:bg-green-100 p-6">
-    <p class="message"></p>
-</div>
-
-<main class="mx-auto max-w-6xl px-4 py-10 flex flex-col">
-
-    <form id="prompt-form" class="mt-auto" >
+<body class="bg-gray-100">
+<div class="flex h-screen w-full items-center justify-center">
+    <div class="grid h-full w-full grid-cols-10 grid-rows-4 gap-4">
+        <!-- Section Titre --->
+        <div class="col-span-10 row-span-1 flex justify-center items-center">
+            <h3 class="text-4xl font-bold text-green-900 uppercase">
+                Ruvunga's Chatbot
+            </h3>
+        </div>
+        <!-- Section conversation --->
+        <div class="col-span-10 row-span-3 flex justify-center px-4 py-10 overflow-y-auto">
+            <div id="chat-template" class="hidden odd:bg-green-50 even:bg-green-100 p-6 mx-auto w-9/12 m-1 rounded-xl">
+                 <p class="message"></p>
+            </div>
+            <div id="gpt-output" class="mx-auto w-9/12"></div>
+        </div>
+        <!-- Section question --->
+        <div class="col-span-10 row-span-1 flex justify-center px-4 py-10">
+                <form id="prompt-form" class="mt-auto w-9/12" >
         <label for="prompt" class="sr-only">Vous</label>
         <div>
             <label for="prompt" class="sr-only">Assistant</label>
@@ -64,8 +70,11 @@
             </div>
         </div>
     </form>
-    <div id="gpt-output"></div>
-</main>
+        </div>
+
+    </div>
+</div>
+
 </body>
     <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
