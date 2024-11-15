@@ -1,0 +1,5 @@
+Table Name,Description
+categories,"Contains information on product categories, including their names and descriptions."
+marques,"Holds data on product brands, including their name, description, and country of origin."
+produits,"Lists all products available, with details like name, description, price, stock quantity, category, brand, supplier, and expiration date."
+stock,"Tracks stock entries, including product ID, quantity added, and date of addition."
